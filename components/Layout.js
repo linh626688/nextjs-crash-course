@@ -1,12 +1,18 @@
 import styles from '../styles/Layout.module.css'
+import Nav from "./Nav";
+import Header from "./Header";
 
 function Layout({children}) {
     return (
-        <div className={styles.container}>
-            <main className={styles.main}>
-                {children}
-            </main>
-        </div>
+        <>
+            <Nav/>
+            <div className={styles.container}>
+                <main className={styles.main}>
+                    <Header/>
+                    {children}
+                </main>
+            </div>
+        </>
     );
 }
 
